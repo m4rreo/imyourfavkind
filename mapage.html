@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>shinzhere</title>
+
+    <style>
+    </style>
+    <style>
+        #button {
+            color: #e5e8f4;
+            background-color: #0c1033;
+            padding: 20px 40px;
+            border: 5px solid #0c1033;
+            border-radius: 20px 20px;
+            margin: 40px 0px;
+            font-family: Arial Narrow;
+            font-size: xx-large;
+            position: absolute;
+            top: 220px;
+            left: 550px;
+        }
+    </style>
+
+    <style>
+        #faves {
+            border: 0.5px solid #bdbdbd;
+            font-family: Arial Narrow;
+            font-size: large;
+            font-weight: lighter;
+            border-radius: 8px 8px;
+            color: #0c1033;
+            width: 100px;
+            padding: 0px 5px;
+            position: absolute;
+            top: 350px;
+            left: 450px;
+
+        }
+
+        #likes {
+            border: 0.5px solid #bdbdbd;
+            font-family: Arial Narrow;
+            font-size: large;
+            font-weight: lighter;
+            border-radius: 8px 8px;
+            color: #0c1033;
+            width: 100px;
+            padding: 0px 5px;
+            position: absolute;
+            top: 350px;
+            left: 560px;
+        }
+
+        #favanimes {
+            border: 0.5px solid #bdbdbd;
+            font-family: Arial Narrow;
+            font-size: medium;
+            font-weight: lighter;
+            border-radius: 8px 8px;
+            color: #0c1033;
+            width: 55px;
+            padding: 0px 5px;
+            position: absolute;
+            top: 350px;
+            left: 675px;
+        }
+
+        #favsongs {
+            border: 0.5px solid #bdbdbd;
+            font-family: Arial Narrow;
+            font-size: medium;
+            font-weight: lighter;
+            border-radius: 8px 8px;
+            color: #0c1033;
+            width: 55px;
+            padding: 0px 5px;
+            position: absolute;
+            top: 350px;
+            left: 748px;
+        }
+
+        #faves1 {
+            background-color: #0c1033;
+            font-family: Arial Narrow;
+            font-size: medium;
+            font-weight: 100;
+            border-radius: 8px 8px;
+            color: #e5e8f4;
+            width: 100px;
+            padding: 0px 5px;
+            position: absolute;
+            top: 377px;
+            left: 450px;
+        }
+
+        #likes1 {
+            background-color: #0c1033;
+            font-family: Arial Narrow;
+            font-size: medium;
+            font-weight: lighter;
+            border-radius: 8px 8px;
+            color: #e5e8f4;
+            width: 100px;
+            padding: 0px 5px;
+            position: absolute;
+            top: 377px;
+            left: 560px;
+        }
+        
+        #favgroups {
+            background-color: #0c1033;
+            font-family: Arial Narrow;
+            font-size: medium;
+            font-weight: lighter;
+            border-radius: 8px 8px;
+            color: #e5e8f4;
+            width: 55px;
+            padding: 0px 5px;
+            position: absolute;
+            top: 395px;
+            left: 675px;
+        }
+
+        #favhobbies {
+            background-color: #0c1033;
+            font-family: Arial Narrow;
+            font-size: medium;
+            font-weight: lighter;
+            border-radius: 8px 8px;
+            color: #e5e8f4;
+            width: 55px;
+            padding: 0px 5px;
+            position: absolute;
+            top: 395px;
+            left: 748px;
+        }
+
+
+        
+
+
+
+        
+
+    </style>
+
+    <style>
+        #pic1 {
+            position: absolute;
+            top: 250px;
+            left: 450px;
+        }
+    </style>
+
+    <style>
+        #pic2 {
+            position: absolute;
+            top: 250px;
+            left: 720px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <style>
+        /* CSS из раздела 2 */
+        .audio-player {
+            position: absolute;
+            top: 135px;
+            left: 450px;
+            color: #0c1033;
+            width: 365px;
+            height: 110px;
+            font-family: Arial Narrow;
+            border: 0.5px solid #bdbdbd;
+            border-radius: 20px 20px;
+            font-weight: normal;
+        }
+
+        .progress-container {
+            height: 4px;
+            width: 354px;
+            background: #bdbdbd;
+            border-radius: 20px 20px;
+            margin: 5px 5px;
+            cursor: pointer;
+        }
+
+        .progress-bar {
+            height: 80%;
+            background: #0c1033;
+            width: 0%;
+            border-radius: 8px 8px;
+        }
+
+        .controls {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        #play-pause {
+            position: absolute;
+            top: 72px;
+            left: 5px;
+            padding: 3px 17px;
+            background: #0c1033;
+            color: #e5e8f4;
+            border: 4px solid #0c1033;
+            border-radius: 10px 10px;
+            cursor: pointer;
+        }
+
+        #time {
+            position: absolute;
+            left: 61px;
+            top: 86px;
+            font-size: 0.9em;
+            color: #0c1033;
+        }
+    </style>
+    </head>
+
+    <body>
+
+        <div class="audio-player">
+            <h3 style="margin: 18px 5px; font-weight: lighter; color: #0c1033;">Aibo (ft. Bratty)</h3>
+            <audio id="audio" src="./aibo.mp3"></audio>
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+            <div class="controls">
+                <button id="play-pause">▶</button>
+                <span id="time">0:00 / 0:00</span>
+            </div>
+        </div>
+
+        <script>
+            const audio = document.getElementById('audio');
+            const playPauseBtn = document.getElementById('play-pause');
+            const progressContainer = document.querySelector('.progress-container');
+            const progressBar = document.querySelector('.progress-bar');
+            const timeDisplay = document.getElementById('time');
+
+            function formatTime(seconds) {
+                const mins = Math.floor(seconds / 60);
+                const secs = Math.floor(seconds % 60);
+                return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+            }
+
+            function updateProgress() {
+                const { currentTime, duration } = audio;
+                const progress = (currentTime / duration) * 100;
+                progressBar.style.width = `${progress}%`;
+                timeDisplay.textContent = `${formatTime(currentTime)} / ${formatTime(duration)}`;
+            }
+
+            progressContainer.addEventListener('click', (e) => {
+                const clickPos = (e.offsetX / progressContainer.offsetWidth);
+                audio.currentTime = clickPos * audio.duration;
+            });
+
+            playPauseBtn.addEventListener('click', () => {
+                if (audio.paused) {
+                    audio.play();
+                    playPauseBtn.textContent = '❚';
+                } else {
+                    audio.pause();
+                    playPauseBtn.textContent = '▶';
+                }
+            });
+
+            audio.addEventListener('timeupdate', updateProgress);
+            audio.addEventListener('loadedmetadata', () => {
+                timeDisplay.textContent = `0:00 / ${formatTime(audio.duration)}`;
+            });
+        </script>
+
+    </body>
+
+</html>
+<div>
+    <form action="https://pin.it/5i1fYDtAa" target="_blank"></form>
+    <button type="submit" id="button">shinriri</button>
+    </form>
+</div>
+<div>
+    <img id="pic1" src="./bow.jpg" width="90px" alt="oops :(">
+</div>
+
+<body>
+    <img id="pic2" src="./flower.jpg" width="90px" alt="oops!!">
+    <iframe style="position: absolute; top: 130px; left: 200px;"
+        src="https://assets.pinterest.com/ext/embed.html?id=977492294134992668" height="336" width="236" frameborder="0"
+        scrolling="no"></iframe>
+</body>
+
+<h1 id="faves">fav animes</h1>
+<h1 id="likes">fav songs</h1>
+<h1 id="favanimes">fav groups</h1>
+<h1 id="favsongs">fav hobbies</h1>
+<h1 id="faves1">oshinoko kamisama kiss kimi ni todoke horimiya</h1>
+<h1 id="likes1">magic by txt stars by yves enemy by charli iykyk by xg</h1>
+<h1 id="favgroups">enha txt baemon bv njz</h1>
+<h1 id="favhobbies">coding reading music</h1>
+
+</body>
+
+</html>
